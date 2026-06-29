@@ -1,0 +1,203 @@
+[gd_scene load_steps=24 format=3 uid="uid://fmmtuj6715iw"]
+
+[ext_resource type="Script" uid="uid://l6lgg8d5w153" path="res://scripts/infowindow.gd" id="1_bhqk8"]
+[ext_resource type="Theme" uid="uid://tg03anjcse7" path="res://infowindow.tres" id="2_bhqk8"]
+[ext_resource type="Texture2D" uid="uid://bv6q1o0mgppas" path="res://gooey/NEWGUIBUTONSETTINGS2.png" id="7_3wprb"]
+[ext_resource type="FontFile" uid="uid://jd4tkh7fub87" path="res://gooey/MinecraftStandard.otf" id="7_ioye1"]
+[ext_resource type="Texture2D" uid="uid://ddsercr31f8xl" path="res://gooey/Rectangle 232.png" id="7_o8nx0"]
+[ext_resource type="Texture2D" uid="uid://ctg3rc4jw1irg" path="res://gooey/Rectangle 23pressed.png" id="8_3wprb"]
+[ext_resource type="FontFile" uid="uid://bs2rtpno7d8qq" path="res://fonts/segoeuithibd.ttf" id="8_ioye1"]
+[ext_resource type="Texture2D" uid="uid://51siar7g5ku" path="res://gooey/NEWGUIBUTONSETTINGS2hover.png" id="8_xfuio"]
+[ext_resource type="Texture2D" uid="uid://0faancy7f3s0" path="res://gooey/NEWGUIBUTONSETTINGS2click.png" id="9_r012h"]
+[ext_resource type="Texture2D" uid="uid://blrrstdsdfj7e" path="res://gooey/Rectangle 23Hover.png" id="9_xfuio"]
+[ext_resource type="Texture2D" uid="uid://d3iyg1pqj1t3m" path="res://gooey/NEWGUIBUTONSETTINGShover.png" id="10_xfuio"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8mgwv"]
+font = ExtResource("8_ioye1")
+font_size = 11
+shadow_size = 6
+shadow_color = Color(1, 1, 1, 0.30400002)
+shadow_offset = Vector2(0, 0)
+
+[sub_resource type="ImageTexture" id="ImageTexture_o8nx0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fimwk"]
+texture = ExtResource("7_3wprb")
+region_rect = Rect2(0, 4, 136, 46)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_csp8p"]
+texture = ExtResource("8_xfuio")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o1hig"]
+texture = ExtResource("9_r012h")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xfuio"]
+content_margin_left = 0.0
+content_margin_top = 4.0
+content_margin_right = 0.0
+content_margin_bottom = 4.0
+bg_color = Color(0.007843138, 0.24313726, 0.34901962, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r012h"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3wprb"]
+texture = ExtResource("10_xfuio")
+texture_margin_top = 12.0
+texture_margin_bottom = 14.0
+region_rect = Rect2(0, 0, 308, 44)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xfuio"]
+texture = ExtResource("9_r012h")
+texture_margin_top = 20.0
+texture_margin_bottom = 16.0
+region_rect = Rect2(0, 0, 136, 44)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r012h"]
+texture = ExtResource("9_r012h")
+texture_margin_top = 16.0
+texture_margin_bottom = 8.0
+region_rect = Rect2(0, 0, 136, 44)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fimwk"]
+content_margin_left = 4.0
+content_margin_top = 0.0
+content_margin_right = 4.0
+content_margin_bottom = 0.0
+bg_color = Color(0.007843138, 0.24313726, 0.34901962, 1)
+border_width_left = 1
+border_width_right = 1
+border_color = Color(0.03652123, 0.49575514, 0.69112146, 1)
+corner_detail = 6
+
+[sub_resource type="Theme" id="Theme_8ihcf"]
+default_font = ExtResource("7_ioye1")
+default_font_size = 12
+HScrollBar/icons/decrement = SubResource("ImageTexture_o8nx0")
+HScrollBar/icons/decrement_highlight = SubResource("ImageTexture_o8nx0")
+HScrollBar/icons/decrement_pressed = SubResource("ImageTexture_o8nx0")
+HScrollBar/icons/increment = SubResource("ImageTexture_o8nx0")
+HScrollBar/icons/increment_highlight = SubResource("ImageTexture_o8nx0")
+HScrollBar/icons/increment_pressed = SubResource("ImageTexture_o8nx0")
+HScrollBar/styles/grabber = SubResource("StyleBoxTexture_fimwk")
+HScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_csp8p")
+HScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_o1hig")
+HScrollBar/styles/scroll = SubResource("StyleBoxFlat_xfuio")
+HScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_r012h")
+VScrollBar/icons/decrement = SubResource("ImageTexture_o8nx0")
+VScrollBar/icons/decrement_highlight = SubResource("ImageTexture_o8nx0")
+VScrollBar/icons/decrement_pressed = SubResource("ImageTexture_o8nx0")
+VScrollBar/icons/increment = SubResource("ImageTexture_o8nx0")
+VScrollBar/icons/increment_highlight = SubResource("ImageTexture_o8nx0")
+VScrollBar/icons/increment_pressed = SubResource("ImageTexture_o8nx0")
+VScrollBar/styles/grabber = SubResource("StyleBoxTexture_3wprb")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxTexture_xfuio")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxTexture_r012h")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_fimwk")
+VScrollBar/styles/scroll_focus = SubResource("StyleBoxFlat_r012h")
+
+[node name="Window" type="Window"]
+transparent_bg = true
+oversampling_override = 1.0
+position = Vector2i(0, 23)
+size = Vector2i(500, 700)
+unresizable = true
+borderless = true
+always_on_top = true
+transparent = true
+script = ExtResource("1_bhqk8")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_right = 0.73600006
+anchor_bottom = 0.73600006
+offset_right = -3.0517578e-05
+offset_bottom = -6.1035156e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_bhqk8")
+
+[node name="TextureButton" type="TextureButton" parent="Panel"]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -67.0
+offset_top = -1.0
+offset_right = -27.86499
+offset_bottom = 14.0
+grow_horizontal = 0
+texture_normal = ExtResource("7_o8nx0")
+texture_pressed = ExtResource("8_3wprb")
+texture_hover = ExtResource("9_xfuio")
+
+[node name="Label" type="Label" parent="Panel/TextureButton"]
+visible = false
+layout_mode = 0
+offset_top = -4.985
+offset_right = 40.0
+offset_bottom = 19.015
+text = "X"
+label_settings = SubResource("LabelSettings_8mgwv")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Panel/Control"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Control/CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.026
+anchor_top = 0.021428572
+anchor_right = 0.718
+anchor_bottom = 0.6942857
+offset_left = 1.0
+offset_top = 6.0
+offset_right = 1.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_8ihcf")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+text = "Recommendations vary on browsers, specifically on what privacy means for the user and how easy it is to use. Brave is a great start, as it blocks everything by default. Firefox is another good option, though extensions like uBlock origin will be needed. Open-source options also exist like the Mullvad Browser, LibreWolf, Zen Browser and Waterfox.
+
+You’ll only need extensions if your browser doesnt already block cookies, fingerprinting or ads. But for good overall extensions Privacy Badger and uBlock Origin will do a good job.
+
+Keep in mind that privacy comes at the cost of accessibility, some websites may break, some browsers might be difficult to understand. That is the price for privacy nowadays."
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true

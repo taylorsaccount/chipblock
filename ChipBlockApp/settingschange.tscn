@@ -1,0 +1,334 @@
+[gd_scene load_steps=37 format=3 uid="uid://c7qvbvb44tjni"]
+
+[ext_resource type="Script" uid="uid://3tgly5rcqf1a" path="res://scripts/settingschange.gd" id="1_13uwi"]
+[ext_resource type="Texture2D" uid="uid://cg0q8cid72oag" path="res://gooey/NEWGUIBUTTONBOXSETTINGS.png" id="2_id8mm"]
+[ext_resource type="FontFile" uid="uid://jd4tkh7fub87" path="res://gooey/MinecraftStandard.otf" id="6_n40cp"]
+[ext_resource type="Texture2D" uid="uid://bv6q1o0mgppas" path="res://gooey/NEWGUIBUTONSETTINGS2.png" id="7_3wk4q"]
+[ext_resource type="Theme" uid="uid://df2eojl2fnkrb" path="res://slider.tres" id="8_13uwi"]
+[ext_resource type="Texture2D" uid="uid://0faancy7f3s0" path="res://gooey/NEWGUIBUTONSETTINGS2click.png" id="8_h6unx"]
+[ext_resource type="Texture2D" uid="uid://51siar7g5ku" path="res://gooey/NEWGUIBUTONSETTINGS2hover.png" id="9_3weqo"]
+[ext_resource type="Texture2D" uid="uid://un87vd1kv45j" path="res://gooey/NEWGUIGRABBER.png" id="9_id8mm"]
+[ext_resource type="Texture2D" uid="uid://b2rabh7gw26k1" path="res://gooey/NEWGUIGRABBERhighlight.png" id="10_6k3b0"]
+[ext_resource type="Texture2D" uid="uid://bv5iyl7vv7t4b" path="res://gooey/NEWGUITEXTsettings.png" id="10_ibdxi"]
+[ext_resource type="Texture2D" uid="uid://cwsi71cpwlnik" path="res://gooey/NEWGUIBUTONSETTINGSEXITCHECKBOXCLICKED.png" id="11_6k3b0"]
+[ext_resource type="Texture2D" uid="uid://bq1saooip1bsf" path="res://gooey/NEWGUIBUTONSETTINGStitle.png" id="11_s2hld"]
+[ext_resource type="Texture2D" uid="uid://cxyiudh2n0y0h" path="res://gooey/NEWGUIBUTONSETTINGSEXITCHECKBOX.png" id="12_23ssl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c10ha"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nkug2"]
+texture = ExtResource("2_id8mm")
+
+[sub_resource type="Theme" id="Theme_1k4ii"]
+default_font = ExtResource("6_n40cp")
+default_font_size = 9
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1k4ii"]
+texture = ExtResource("10_ibdxi")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13uwi"]
+atlas = ExtResource("9_id8mm")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_id8mm"]
+atlas = ExtResource("10_6k3b0")
+
+[sub_resource type="DPITexture" id="DPITexture_13uwi"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"16\"><rect width=\"30\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".75\" rx=\"7\"/><circle cx=\"24\" cy=\"8\" r=\"5\" fill=\"#1a1a1a\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_id8mm"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"16\"><rect width=\"30\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".37\" rx=\"7\"/><circle cx=\"24\" cy=\"8\" r=\"5\" fill=\"#1a1a1a\" fill-opacity=\".5\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_6k3b0"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"16\"><rect width=\"30\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".37\" rx=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"5\" fill=\"#1a1a1a\" fill-opacity=\".5\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_23ssl"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"16\"><rect width=\"30\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".75\" rx=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"5\" fill=\"#1a1a1a\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_c10ha"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"16\"><g fill-opacity=\".5\"><rect width=\"30\" height=\"14\" x=\"1\" y=\"1\" fill=\"#1a1a1a\" rx=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"5\" fill=\"#fff\"/></g></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_n40cp"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"16\"><g fill-opacity=\".25\"><rect width=\"30\" height=\"14\" x=\"1\" y=\"1\" fill=\"#1a1a1a\" rx=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"5\" fill=\"#fff\"/></g></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_3wk4q"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"16\"><g fill-opacity=\".25\"><rect width=\"30\" height=\"14\" x=\"1\" y=\"1\" fill=\"#1a1a1a\" rx=\"7\"/><circle cx=\"24\" cy=\"8\" r=\"5\" fill=\"#fff\"/></g></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_h6unx"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"16\"><g fill-opacity=\".5\"><rect width=\"30\" height=\"14\" x=\"1\" y=\"1\" fill=\"#1a1a1a\" rx=\"7\"/><circle cx=\"24\" cy=\"8\" r=\"5\" fill=\"#fff\"/></g></svg>
+"
+
+[sub_resource type="Theme" id="Theme_3weqo"]
+default_font = ExtResource("6_n40cp")
+default_font_size = 10
+CheckButton/icons/checked = SubResource("DPITexture_13uwi")
+CheckButton/icons/checked_disabled = SubResource("DPITexture_id8mm")
+CheckButton/icons/checked_disabled_mirrored = SubResource("DPITexture_6k3b0")
+CheckButton/icons/checked_mirrored = SubResource("DPITexture_23ssl")
+CheckButton/icons/unchecked = SubResource("DPITexture_c10ha")
+CheckButton/icons/unchecked_disabled = SubResource("DPITexture_n40cp")
+CheckButton/icons/unchecked_disabled_mirrored = SubResource("DPITexture_3wk4q")
+CheckButton/icons/unchecked_mirrored = SubResource("DPITexture_h6unx")
+CheckButton/styles/focus = null
+
+[sub_resource type="Theme" id="Theme_ibdxi"]
+default_font = ExtResource("6_n40cp")
+default_font_size = 10
+
+[sub_resource type="Theme" id="Theme_13uwi"]
+default_font = ExtResource("6_n40cp")
+default_font_size = 9
+
+[sub_resource type="Theme" id="Theme_s2hld"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6k3b0"]
+atlas = ExtResource("11_6k3b0")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23ssl"]
+atlas = ExtResource("12_23ssl")
+
+[sub_resource type="Theme" id="Theme_6k3b0"]
+default_font = ExtResource("6_n40cp")
+default_font_size = 10
+
+[sub_resource type="Theme" id="Theme_5wsqf"]
+default_font = ExtResource("6_n40cp")
+default_font_size = 10
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6k3b0"]
+
+[node name="Window" type="Window"]
+transparent_bg = true
+oversampling_override = 1.0
+size = Vector2i(634, 688)
+borderless = true
+always_on_top = true
+transparent = true
+script = ExtResource("1_13uwi")
+metadata/_edit_vertical_guides_ = [84.0, 551.0, 166.0]
+metadata/_edit_horizontal_guides_ = [74.0]
+
+[node name="Settings" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_c10ha")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_nkug2")
+
+[node name="TextureButton2" type="TextureButton" parent="Settings"]
+layout_mode = 1
+offset_left = 84.0
+offset_top = 69.0
+offset_right = 220.0
+offset_bottom = 119.0
+texture_normal = ExtResource("7_3wk4q")
+texture_pressed = ExtResource("8_h6unx")
+texture_hover = ExtResource("9_3weqo")
+
+[node name="Label" type="Label" parent="Settings/TextureButton2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_1k4ii")
+text = "< Return"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Settings"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.0
+offset_top = -207.0
+offset_right = 234.0
+offset_bottom = 285.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1k4ii")
+
+[node name="HSlider2" type="HSlider" parent="Settings/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.17400001
+anchor_top = 0.505
+anchor_right = 0.82800007
+anchor_bottom = 0.54200006
+offset_left = 0.2299881
+offset_top = 0.22998047
+offset_right = -0.18804932
+offset_bottom = 0.025939941
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_13uwi")
+theme_override_icons/grabber = SubResource("AtlasTexture_13uwi")
+theme_override_icons/grabber_highlight = SubResource("AtlasTexture_id8mm")
+min_value = 19.0
+max_value = 30.0
+value = 19.0
+
+[node name="Label" type="Label" parent="Settings/Panel/HSlider2"]
+layout_mode = 1
+offset_left = 1.0
+offset_top = -26.0
+offset_right = 145.0
+offset_bottom = -3.0
+theme = SubResource("Theme_3weqo")
+text = "Font size info box"
+
+[node name="HSlider" type="HSlider" parent="Settings/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.17600001
+anchor_top = 0.31100002
+anchor_right = 0.82900006
+anchor_bottom = 0.34800002
+offset_left = -0.19200897
+offset_top = -0.012008667
+offset_right = -0.14303589
+offset_bottom = -0.21600342
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_13uwi")
+theme_override_icons/grabber = SubResource("AtlasTexture_13uwi")
+theme_override_icons/grabber_highlight = SubResource("AtlasTexture_id8mm")
+min_value = 19.0
+max_value = 30.0
+value = 19.0
+
+[node name="Label" type="Label" parent="Settings/Panel/HSlider"]
+layout_mode = 0
+offset_top = -26.0
+offset_right = 140.0
+offset_bottom = -3.0
+theme = SubResource("Theme_ibdxi")
+text = "Font size chip text"
+
+[node name="close" type="TextureButton" parent="Settings/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -68.0
+offset_top = -75.0
+offset_right = 68.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("7_3wk4q")
+texture_pressed = ExtResource("8_h6unx")
+texture_hover = ExtResource("9_3weqo")
+
+[node name="Label" type="Label" parent="Settings/Panel/close"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_13uwi")
+text = "Exit program"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckButton" type="CheckButton" parent="Settings/Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 77.0
+offset_top = 85.0
+offset_right = 131.0
+offset_bottom = 121.0
+grow_vertical = 2
+theme = SubResource("Theme_s2hld")
+theme_override_icons/checked = SubResource("AtlasTexture_6k3b0")
+theme_override_icons/unchecked = SubResource("AtlasTexture_23ssl")
+
+[node name="Label" type="Label" parent="Settings/Panel/CheckButton"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -22.0
+offset_right = 132.0
+offset_bottom = 1.0
+theme = SubResource("Theme_6k3b0")
+text = "Tritanopia mode"
+
+[node name="TextureButton3" type="TextureButton" parent="Settings"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -152.5
+offset_top = 153.0
+offset_right = 152.5
+offset_bottom = 203.0
+grow_horizontal = 2
+texture_normal = ExtResource("11_s2hld")
+
+[node name="Label" type="Label" parent="Settings/TextureButton3"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_5wsqf")
+text = "Detected trackers/fingerprinters"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Settings"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -152.5
+offset_top = 153.0
+offset_right = 152.5
+offset_bottom = 203.0
+grow_horizontal = 2
+texture_normal = ExtResource("11_s2hld")
+
+[node name="Label" type="Label" parent="Settings/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_5wsqf")
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Settings"]
+visible = false
+material = SubResource("ShaderMaterial_6k3b0")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="Settings/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="value_changed" from="Settings/Panel/HSlider" to="." method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="Settings/Panel/close" to="." method="_on_close_pressed"]

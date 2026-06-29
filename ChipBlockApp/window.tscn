@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://rgb2ttu3j0a4"]
+
+[ext_resource type="Theme" uid="uid://brw5q75ayasho" path="res://guiyesno.tres" id="1_hjewq"]
+
+[node name="Window" type="Window"]
+transparent_bg = true
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(600, 400)
+unresizable = true
+borderless = true
+always_on_top = true
+transparent = true
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_right = 0.595
+anchor_bottom = 0.595
+offset_right = -3.0517578e-05
+offset_bottom = -1.5258789e-05
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_hjewq")
+
+[node name="disagree" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -85.82608
+offset_top = -97.0
+offset_right = 85.82608
+offset_bottom = -41.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_hjewq")
+text = "No"
+icon_alignment = 1
+
+[node name="agree" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -85.82599
+offset_top = 56.0
+offset_right = 85.82599
+offset_bottom = 112.0
+grow_horizontal = 2
+theme = ExtResource("1_hjewq")
+text = "Yes"
+icon_alignment = 1

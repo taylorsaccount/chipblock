@@ -1,0 +1,51 @@
+[gd_resource type="Theme" load_steps=12 format=3 uid="uid://df2eojl2fnkrb"]
+
+[ext_resource type="Texture2D" uid="uid://b2ihagl1h2b7k" path="res://gooey/NEWGUITICK.png" id="1_p1m3c"]
+[ext_resource type="Texture2D" uid="uid://bu1keqeof2o0e" path="res://gooey/NEWGUISLIDER.png" id="2_nxy4e"]
+
+[sub_resource type="DPITexture" id="DPITexture_aci4j"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".75\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_d0pog"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\" fill-opacity=\".37\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_44b2u"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\"><circle cx=\"8\" cy=\"8\" r=\"7\" fill=\"#fefefe\"/></svg>
+"
+
+[sub_resource type="DPITexture" id="DPITexture_w3kkl"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"4\" height=\"8\"><path fill=\"#fff\" fill-opacity=\".25\" d=\"M1 0h2v16H1z\"/></svg>
+"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxy4e"]
+atlas = ExtResource("2_nxy4e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p1m3c"]
+texture = SubResource("AtlasTexture_nxy4e")
+texture_margin_left = 4.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p1m3c"]
+atlas = ExtResource("1_p1m3c")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nxy4e"]
+texture = SubResource("AtlasTexture_p1m3c")
+texture_margin_left = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vhb5e"]
+texture = ExtResource("2_nxy4e")
+texture_margin_top = 18.0
+texture_margin_right = 5.0
+
+[resource]
+HSlider/constants/center_grabber = 0
+HSlider/constants/grabber_offset = 0
+HSlider/constants/tick_offset = 0
+HSlider/icons/grabber = SubResource("DPITexture_aci4j")
+HSlider/icons/grabber_disabled = SubResource("DPITexture_d0pog")
+HSlider/icons/grabber_highlight = SubResource("DPITexture_44b2u")
+HSlider/icons/tick = SubResource("DPITexture_w3kkl")
+HSlider/styles/grabber_area = SubResource("StyleBoxTexture_p1m3c")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_nxy4e")
+HSlider/styles/slider = SubResource("StyleBoxTexture_vhb5e")

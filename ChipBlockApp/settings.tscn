@@ -1,0 +1,267 @@
+[gd_scene load_steps=24 format=3 uid="uid://bsoy5veq26v61"]
+
+[ext_resource type="Script" uid="uid://ct1te0i2v6dhn" path="res://scripts/settings.gd" id="1_1k4ii"]
+[ext_resource type="Texture2D" uid="uid://cg0q8cid72oag" path="res://gooey/NEWGUIBUTTONBOXSETTINGS.png" id="1_x2hje"]
+[ext_resource type="Texture2D" uid="uid://blsqei1jg2a5v" path="res://gooey/NEWGUISETTINGSBUTTON1.png" id="2_71mqq"]
+[ext_resource type="Texture2D" uid="uid://0faancy7f3s0" path="res://gooey/NEWGUIBUTONSETTINGS2click.png" id="3_3j6r5"]
+[ext_resource type="Texture2D" uid="uid://dagbr38t3adp3" path="res://gooey/NEWGUIBUTONSETTINGSclick.png" id="3_ohexs"]
+[ext_resource type="Texture2D" uid="uid://d3iyg1pqj1t3m" path="res://gooey/NEWGUIBUTONSETTINGShover.png" id="4_1k4ii"]
+[ext_resource type="Texture2D" uid="uid://51siar7g5ku" path="res://gooey/NEWGUIBUTONSETTINGS2hover.png" id="4_3lj6o"]
+[ext_resource type="Texture2D" uid="uid://bv6q1o0mgppas" path="res://gooey/NEWGUIBUTONSETTINGS2.png" id="5_6mhpt"]
+[ext_resource type="Texture2D" uid="uid://bv5iyl7vv7t4b" path="res://gooey/NEWGUITEXTsettings.png" id="6_ohexs"]
+[ext_resource type="FontFile" uid="uid://jd4tkh7fub87" path="res://gooey/MinecraftStandard.otf" id="9_82xqq"]
+[ext_resource type="Texture2D" uid="uid://bq1saooip1bsf" path="res://gooey/NEWGUIBUTONSETTINGStitle.png" id="10_y43lv"]
+[ext_resource type="Texture2D" uid="uid://dljx7l4ex2qjb" path="res://gooey/NEWGUIBUTONSETTINGSEXIT.png" id="12_7eiv2"]
+[ext_resource type="Texture2D" uid="uid://bt550gqh8tu45" path="res://gooey/NEWGUIBUTONSETTINGSEXITCLICK.png" id="13_tk3m0"]
+[ext_resource type="Texture2D" uid="uid://cepuo6jynt0ir" path="res://gooey/NEWGUIBUTONSETTINGSEXITHOVER.png" id="14_fdp2d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nkug2"]
+texture = ExtResource("1_x2hje")
+
+[sub_resource type="Theme" id="Theme_ohexs"]
+default_font = ExtResource("9_82xqq")
+default_font_size = 9
+
+[sub_resource type="Theme" id="Theme_1k4ii"]
+default_font = ExtResource("9_82xqq")
+default_font_size = 9
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1k4ii"]
+texture = ExtResource("6_ohexs")
+
+[sub_resource type="Theme" id="Theme_7eiv2"]
+default_font = ExtResource("9_82xqq")
+default_font_size = 10
+
+[sub_resource type="Theme" id="Theme_82xqq"]
+default_font = ExtResource("9_82xqq")
+default_font_size = 10
+
+[sub_resource type="Theme" id="Theme_fdp2d"]
+default_font = ExtResource("9_82xqq")
+default_font_size = 9
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0y8d"]
+bg_color = Color(0.07016479, 0.07016479, 0.07016479, 0.591)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+corner_detail = 20
+expand_margin_left = 6.0
+expand_margin_top = 4.0
+expand_margin_right = 6.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="Theme" id="Theme_tk3m0"]
+default_font = ExtResource("9_82xqq")
+default_font_size = 14
+
+[node name="Window" type="Window"]
+transparent_bg = true
+oversampling_override = 1.0
+size = Vector2i(634, 688)
+borderless = true
+always_on_top = true
+transparent = true
+script = ExtResource("1_1k4ii")
+metadata/_edit_vertical_guides_ = [84.0, 551.0]
+metadata/_edit_horizontal_guides_ = [74.0]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_nkug2")
+
+[node name="TextureButton" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.132
+anchor_top = 0.1
+anchor_right = 0.614
+anchor_bottom = 0.17300001
+offset_left = 0.3120041
+offset_top = 0.19999695
+offset_right = -0.27600098
+offset_bottom = -0.024002075
+texture_normal = ExtResource("2_71mqq")
+texture_pressed = ExtResource("3_ohexs")
+texture_hover = ExtResource("4_1k4ii")
+
+[node name="Label" type="Label" parent="Panel/TextureButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ohexs")
+text = "What are trackers/fingerprinters?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureButton2" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -219.0
+offset_top = 69.0
+offset_right = -83.0
+offset_bottom = 119.0
+grow_horizontal = 0
+texture_normal = ExtResource("5_6mhpt")
+texture_pressed = ExtResource("3_3j6r5")
+texture_hover = ExtResource("4_3lj6o")
+
+[node name="Label" type="Label" parent="Panel/TextureButton2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_1k4ii")
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -233.0
+offset_top = -207.0
+offset_right = 234.0
+offset_bottom = 295.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1k4ii")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Panel/Panel"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Panel/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 219.0
+offset_right = -100.0
+offset_bottom = -125.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_7eiv2")
+bbcode_enabled = true
+text = "No trackers detected yet!"
+
+[node name="TextureButton3" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -152.5
+offset_top = 153.0
+offset_right = 152.5
+offset_bottom = 203.0
+grow_horizontal = 2
+texture_normal = ExtResource("10_y43lv")
+
+[node name="Label" type="Label" parent="Panel/TextureButton3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_82xqq")
+text = "Detected trackers/fingerprinters"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel/TextureButton3"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -136.5
+offset_top = -31.0
+offset_right = 136.5
+offset_bottom = 8.0
+grow_horizontal = 2
+theme = SubResource("Theme_fdp2d")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e0y8d")
+text = "Trackers are a category of cookies that record your behaviour on  websites.
+Fingerprinters collect specific data about you to create an identifiable profile"
+
+[node name="feedbutton" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.5
+offset_top = -121.0
+offset_right = 152.5
+offset_bottom = -71.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("2_71mqq")
+texture_pressed = ExtResource("3_ohexs")
+texture_hover = ExtResource("4_1k4ii")
+
+[node name="Label" type="Label" parent="Panel/feedbutton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ohexs")
+text = "Feed chip [] trackers"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="close" type="TextureButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89900005
+anchor_top = 0.016
+anchor_right = 0.96500003
+anchor_bottom = 0.057000004
+offset_left = 0.033996582
+offset_top = -0.008000374
+offset_right = 0.19000244
+offset_bottom = -0.21600342
+texture_normal = ExtResource("12_7eiv2")
+texture_pressed = ExtResource("13_tk3m0")
+texture_hover = ExtResource("14_fdp2d")
+
+[node name="Label" type="Label" parent="Panel/close"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -8.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_tk3m0")
+text = "x"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Panel/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Panel/TextureButton2" to="." method="_on_texture_button_2_pressed"]
+[connection signal="gui_input" from="Panel/TextureButton2/Label" to="." method="_on_label_gui_input"]
+[connection signal="mouse_entered" from="Panel/TextureButton3" to="." method="_on_texture_button_3_mouse_entered"]
+[connection signal="mouse_exited" from="Panel/TextureButton3" to="." method="_on_texture_button_3_mouse_exited"]
+[connection signal="pressed" from="Panel/close" to="." method="_on_close_pressed"]

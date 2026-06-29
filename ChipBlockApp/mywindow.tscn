@@ -1,0 +1,124 @@
+[gd_scene load_steps=12 format=3 uid="uid://dyhjs1b0ggpbu"]
+
+[ext_resource type="Script" uid="uid://fxcw8eeypl83" path="res://scripts/window.gd" id="1_wasqy"]
+[ext_resource type="Script" uid="uid://buugxfr7p1021" path="res://scripts/dialogue_manager.gd" id="2_ni6i5"]
+[ext_resource type="Texture2D" uid="uid://7mutmr4d5kr0" path="res://gooey/NEWguitry2_1.png" id="3_48cs0"]
+[ext_resource type="Script" uid="uid://blaalkag1ycur" path="res://scripts/text_box.gd" id="3_jhlku"]
+[ext_resource type="Script" uid="uid://coexfa3syqtxg" path="res://scripts/rich_text_labelTypeef.gd" id="4_s8pjf"]
+[ext_resource type="FontFile" uid="uid://bdgq12e1ycje0" path="res://fonts/VT323-Regular.ttf" id="5_48cs0"]
+[ext_resource type="Script" uid="uid://4qo3aent2gyl" path="res://scripts/audio_stream_player.gd" id="7_48cs0"]
+
+[sub_resource type="Theme" id="Theme_wasqy"]
+
+[sub_resource type="Theme" id="Theme_ni6i5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jhlku"]
+content_margin_left = 47.0
+content_margin_top = 10.0
+content_margin_right = 15.0
+content_margin_bottom = 29.0
+texture = ExtResource("3_48cs0")
+texture_margin_left = 16.0
+texture_margin_top = 21.0
+texture_margin_right = 16.0
+texture_margin_bottom = 40.0
+region_rect = Rect2(0, 0, 210, 120)
+
+[sub_resource type="Theme" id="Theme_xrwpk"]
+default_font = ExtResource("5_48cs0")
+
+[node name="Window" type="Window"]
+transparent_bg = true
+oversampling_override = 1.0
+position = Vector2i(0, 36)
+size = Vector2i(400, 500)
+unresizable = true
+borderless = true
+always_on_top = true
+transparent = true
+unfocusable = true
+popup_window = true
+mouse_passthrough = true
+sharp_corners = true
+keep_title_visible = true
+content_scale_aspect = 3
+content_scale_stretch = 1
+theme = SubResource("Theme_wasqy")
+script = ExtResource("1_wasqy")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = -1
+anchor_left = 0.20700002
+anchor_right = 1.0
+anchor_bottom = 0.38200003
+offset_left = 0.19999695
+offset_bottom = -1.5258789e-05
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogueManager" type="CanvasLayer" parent="HBoxContainer"]
+process_mode = 3
+follow_viewport_enabled = true
+script = ExtResource("2_ni6i5")
+
+[node name="DialogueBox" type="Control" parent="HBoxContainer/DialogueManager"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -300.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 8
+theme = SubResource("Theme_ni6i5")
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/DialogueManager/DialogueBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.83137256, 0.7529412, 0.5921569, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/DialogueManager/DialogueBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.25
+offset_top = -58.0
+offset_right = 150.75687
+offset_bottom = 67.55325
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.145, 1.145)
+theme_override_styles/panel = SubResource("StyleBoxTexture_jhlku")
+script = ExtResource("3_jhlku")
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/DialogueManager/DialogueBox/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = -26
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = -11
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/DialogueManager/DialogueBox/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme = SubResource("Theme_xrwpk")
+theme_override_colors/default_color = Color(0.9529412, 0.44313726, 0.14901961, 1)
+theme_override_font_sizes/normal_font_size = 19
+bbcode_enabled = true
+text = "This is example text lorem ipsum"
+scroll_active = false
+autowrap_mode = 2
+visible_characters_behavior = 1
+script = ExtResource("4_s8pjf")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -11.964
+script = ExtResource("7_48cs0")

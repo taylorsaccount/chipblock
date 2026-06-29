@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://csvit7qy83k1h"]
+
+[ext_resource type="Texture2D" uid="uid://b54eclwwibsce" path="res://gooey/GUIWindows2.png" id="1_tba71"]
+[ext_resource type="Script" uid="uid://blaalkag1ycur" path="res://scripts/text_box.gd" id="2_abu0d"]
+
+[sub_resource type="Theme" id="Theme_d7mqq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_04t0c"]
+texture = ExtResource("1_tba71")
+region_rect = Rect2(0, 0, 918, 598)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(156, 279)
+
+[node name="DialogueBox" type="Control" parent="."]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -200.0
+offset_right = 100.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme = SubResource("Theme_d7mqq")
+
+[node name="ColorRect" type="ColorRect" parent="DialogueBox"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.83137256, 0.7529412, 0.5921569, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="DialogueBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -459.0
+offset_top = -299.0
+offset_right = 459.0
+offset_bottom = 299.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.51, 0.51)
+theme_override_styles/panel = SubResource("StyleBoxTexture_04t0c")
+script = ExtResource("2_abu0d")
