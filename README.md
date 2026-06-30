@@ -1,5 +1,5 @@
 <p align="center">
-<img  src="/iconbig.png" width="200"/>
+<img  src="readmefiles/iconbig.png" width="200"/>
 </p>
 
 # ChipBlock
@@ -14,18 +14,30 @@ Due to issues regarding manifest versions, some browsers may not be able to run 
 
 Within your browser's top bar find the extension icon, click it and navigate to manage extensions.
 
-<img  src="/iconbig.png" width="200"/>
+<img  src="readmefiles/Screenshot 2026-06-30 021635.png" />
 
 Once inside the extension manager, find your browser's developer mode toggle, and turn it on.
 
-<img  src="/iconbig.png" width="200"/>
+<img  src="readmefiles/Screenshot 2026-06-30 022507.png" />
 
 Now you should see an additional bar giving you the option to load an unpacked extention. Click load unpacked, navigate towards the Chipblock bridge folder. Now within the folder, click Privacy Badger master, then src.
 
-<img  src="/iconbig.png" width="200"/>
+<img  src="readmefiles/Screenshot 2026-06-30 022532.png" />
 
 Now within the src folder click the select folder option.
+
+<img  src="readmefiles/Screenshot 2026-06-30 022532.png" />
+<img  src="readmefiles/Screenshot 2026-06-30 022700.png" />
 
 
 
 ChipBlock Bridge is now installed! The last step is to download the app and run it!
+<img  src="readmefiles/congrats.gif" />
+
+### Links
+[Itch.io download](https://toasht.itch.io/chipblock)
+[EFF](https://www.eff.org/)
+
+### Credits
+Thanks to EFF and privacy badger, the plug-in was able to be created through it's open source code.
+
